@@ -1,0 +1,52 @@
+{% load static %}
+<!-- <link rel = "stylesheet" type = "text/css" href = "{% static 'polls/style.css' %}"> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+</head>
+<body >
+<section>
+<!-- 进度条 -->
+<progress id="progress" max="100"><span>0</span>%</progress>
+</section>
+<script>
+
+function click1(){
+    var progress = document.getElementById('progress');
+    progress.getElementsByTagName('span')[0].textContent ="0";
+    for(var i=0;i<=100;i++)
+        updateProgress(i);
+}
+
+function updateProgress(newValue){
+    var progress = document.getElementById('progress');
+    progress.value = newValue;
+    progress.getElementsByTagName('span')[0].textContent = newValue;
+}
+<!-- click1(); -->
+</script>
+<!-- 定义一个id为cg -->
+<span id="cg">加油，代雄，你是最棒的。</span>
+<script>
+<!--这个cg就是span的id，初始化Date时间并转化为字符string类型,每1000毫秒，setInterval() 就会调用函数，直到被关闭。-->
+setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
+</script>
+<h1>你可以访问以下页面</h1>
+
+<ol>   
+<li><a href="http://127.0.0.1:8000/polls/" target="_blank" rel="noopener noreferrer">访问poll页面!</a></li>
+<li><a href="http://127.0.0.1:8000/family/" target="_blank" rel="noopener noreferrer">访问family页面!</a></li>
+<li><a href="http://127.0.0.1:8000/admin/" target="_blank" rel="noopener noreferrer">访问admin页面!</a></li>
+<li><a href="http://127.0.0.1:8000/demo/index" target="_blank" rel="noopener noreferrer">访问demo页面!</a></li>
+</ol>
+
+<h2>你还记得下面的图片吗？那些美好的回忆</h2>
+
+<img border="2" src="{% static 'polls/images/background.jpg' %}" alt="回忆" width="300" height="300"/>
+<!-- <img border="2" src='../static/Img/1.jpg' alt="回忆"/> -->
+
+</body>
+</html>

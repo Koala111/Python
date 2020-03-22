@@ -1,0 +1,19 @@
+li a {
+    color: green;
+}
+
+/* 1 创建一个图片路径数组 */
+/* var imgArr = ['1.jpg','2.jpg','3.jpg'];//图片路径数组  */
+
+/* 2 在数据中随机取出一个  */
+/* var index = Math.floor((Math.random()*imgArr.length));//随机下标，保证随机的数字在数组中能取到  */
+/* var imgSrc = imgArr[index];//随机获取的图片路径 */
+
+/* 3 动态的改变图片src属性 */
+/* var imgEle = document.getElementById('imgEle');//获取需要改变的img标签 */
+/* imgEle.setAttribute('src',imgSrc);//设置src属性 */
+
+body {
+    background: white url("images/background.jpg") no-repeat;
+    /* background: white url("E:/成长知识库/我的下载/5abe4845e0437aa9fbb8c1004774c12c.jpeg") no-repeat; */
+}
